@@ -1,36 +1,20 @@
 'use strict';
-const Generator = require('yeoman-generator');
-const chalk = require('chalk');
-const yosay = require('yosay');
 
-module.exports = class extends Generator {
-  prompting() {
-    // Have Yeoman greet the user.
-    this.log(yosay(
-      'Welcome to the fantabulous ' + chalk.red('generator-flynndustries-styles') + ' generator!'
-    ));
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-    const prompts = [{
-      type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
+var _yeomanGenerator = require('yeoman-generator');
 
-    return this.prompt(prompts).then(props => {
-      // To access props later use this.props.someAnswer;
-      this.props = props;
-    });
-  }
+var _yeomanGenerator2 = _interopRequireDefault(_yeomanGenerator);
 
-  writing() {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
-    );
-  }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  install() {
-    this.installDependencies();
+class FlynnStyles extends _yeomanGenerator2.default {
+  welcome() {
+    this.log('It worked!');
   }
 };
+
+exports.default = FlynnStyles;
+module.exports = exports['default'];
