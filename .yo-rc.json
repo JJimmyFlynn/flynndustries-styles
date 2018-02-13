@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "John Flynn",
+      "authorEmail": "JJimmyFlynn@gmail.com",
+      "authorUrl": "https://johnjflynn.net"
+    }
+  }
+}
