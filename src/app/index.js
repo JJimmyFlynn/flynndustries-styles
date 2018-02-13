@@ -1,4 +1,5 @@
-import Yeoman from 'yeoman-generator'
+import Yeoman from 'yeoman-generator';
+import chalk from 'chalk';
 
 class FlynnStyles extends Yeoman {
   welcome() {
