@@ -1,0 +1,75 @@
+// Mixins for use on <%= project %>
+// Author: <%= author %>
+// Table of Contents:
+// I.   Clearfix
+// II.  Breakpoints
+// III. Helpers
+
+
+/* ==========================================================================
+  Trusty Clearfix
+========================================================================== */
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+/* ==========================================================================
+  Breakpoints
+========================================================================== */
+@mixin breakpoint($point) {
+  @media screen and (min-width: $point) { @content; }
+}
+
+
+/* ==========================================================================
+  Helper
+========================================================================== */
+
+///----------List Helper
+@mixin strip-list() {
+  list-style: none;
+  padding-left: 0;
+}
+
+//----------Screen Reader Text
+@mixin srt {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
+  position: absolute !important;
+  white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+
+//----------Form Fields / Groupings
+@mixin placeholder() {
+  ::placeholder {
+    @content;
+  }
+  :placeholder {
+    @content;
+  }
+  /* Chrome/Opera/Safari */
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  /* Firefox 19+ */
+  ::-moz-placeholder {
+    @content;
+  }
+  /* IE 10+ */
+  :-ms-input-placeholder {
+    @content;
+  }
+  /* Firefox 18- */
+  :-moz-placeholder {
+    @content;
+  }
+}
+

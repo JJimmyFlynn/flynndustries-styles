@@ -6,8 +6,7 @@
     ["env",
     {
       "targets": {
-        "node": 6,
-        "uglify": 2
+        "node": 6
       }
     }]
   ]

@@ -1,0 +1,31 @@
+//--------------------------------------------------------------
+// Main Sass file for <%= project %>
+// Author: <%= author %>
+// 
+// Only imports here
+//--------------------------------------------------------------
+
+//----------Vendor Styles
+@import "vendor/_normalize";
+
+//----------Utilities
+@import "utilities/_variables";
+@import "utilities/_mixins";
+
+//----------Base Styles
+@import "base/_base";
+@import "base/_typography";
+@import "base/_wordpress";
+
+//----------Components
+@import "components/_buttons";
+@import "components/_forms";
+
+//----------Modules
+@import "modules/_header";
+@import "modules/_footer";
+
+//----------Pages
+@import "pages/_home";
+@import "pages/_general";
+@import "pages/_posts";
