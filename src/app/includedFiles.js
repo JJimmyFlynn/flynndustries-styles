@@ -17,3 +17,7 @@ export const wordpressFiles = [
 	'base/_wordpress.scss',
 	'pages/_posts.scss'
 ]
+
+export const shopifyFiles = [
+	'base/_shopify.scss'
+]

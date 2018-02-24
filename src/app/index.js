@@ -1,6 +1,7 @@
 import Yeoman from 'yeoman-generator';
 import chalk from 'chalk';
-import { coreFiles, wordpressFiles } from './includedFiles';
+import { 
+  coreFiles, wordpressFiles, shopifyFiles } from './includedFiles';
 
 class FlynnStyles extends Yeoman {
 
@@ -10,6 +11,21 @@ class FlynnStyles extends Yeoman {
 
   prompts() {
     return this.prompt([
+      {
+        type: 'list',
+        name: 'projectType',
+        message: 'Is this a WordPress or Shopify project?',
+        choices: [
+          {
+            name: "WordPress",
+            value: "wordpress"
+          },
+          {
+            name: "Shopify",
+            value: "shopify"
+          }
+        ]
+      },
       {
         type: 'input',
         name: 'basePath',
@@ -28,6 +44,7 @@ class FlynnStyles extends Yeoman {
         default: "John Flynn"
       }
     ]).then(props => {
+        this.options.projectType = props.projectType;
         this.options.basePath = props.basePath;
         this.options.projectName = props.projectName;
         this.options.author = props.author;
@@ -44,6 +61,32 @@ class FlynnStyles extends Yeoman {
         author: this.options.author
       }
     ));
+  }
+
+  copyShopifyFiles() {
+    if (this.options.projectType == 'shopify') {
+      shopifyFiles.forEach(file => this.fs.copyTpl(
+        this.templatePath(this.options.basePath + file),
+        this.destinationPath(this.options.basePath + file),
+        {
+          project: this.options.projectName,
+          author: this.options.author
+        }
+      ));
+    }
+  }
+
+  copyWordPressFiles() {
+    if (this.options.projectType == 'wordpress') {
+      wordpressFiles.forEach(file => this.fs.copyTpl(
+        this.templatePath(this.options.basePath + file),
+        this.destinationPath(this.options.basePath + file),
+        {
+          project: this.options.projectName,
+          author: this.options.author
+        }
+      ));
+    }
   }
   
 };
