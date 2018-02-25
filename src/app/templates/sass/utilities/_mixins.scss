@@ -6,9 +6,9 @@
 // III. Helpers
 
 
-/* ==========================================================================
-  Trusty Clearfix
-========================================================================== */
+//-----------------------------------------
+// Trusty Clearfix
+//-----------------------------------------
 @mixin clearfix() {
   &:after {
     content: "";
@@ -17,37 +17,43 @@
   }
 }
 
-/* ==========================================================================
-  Breakpoints
-========================================================================== */
-@mixin breakpoint($point) {
-  @media screen and (min-width: $point) { @content; }
+//-----------------------------------------
+// Breakpoints
+//-----------------------------------------
+@mixin breakpoint($criteria) {
+  @media screen and ($criteria) { @content; }
 }
 
-
-/* ==========================================================================
-  Helper
-========================================================================== */
-
-///----------List Helper
+//-----------------------------------------
+// Helpers
+//-----------------------------------------
 @mixin strip-list() {
   list-style: none;
   padding-left: 0;
 }
 
-//----------Screen Reader Text
-@mixin srt {
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
+@mixin visually-hidden() {
+  // sass-lint:disable no-important
   position: absolute !important;
-  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
   height: 1px;
   width: 1px;
-  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
+@mixin visually-shown($position: inherit) {
+  // sass-lint:disable no-important
+  position: $position !important;
+  overflow: auto;
+  clip: auto;
+  width: auto;
+  height: auto;
+  margin: 0;
+}
 
-//----------Form Fields / Groupings
 @mixin placeholder() {
   ::placeholder {
     @content;

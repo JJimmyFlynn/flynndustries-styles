@@ -92,7 +92,7 @@ $editor-content-breakpoint: 37.5em;
     font-size: 1em;
   }
   p {
-    line-height: 1.5;
+    line-height: $line-height;
       &:first-child {
         margin-top: 0;
       }
@@ -100,7 +100,7 @@ $editor-content-breakpoint: 37.5em;
   blockquote {
     margin: 1.75em 2.5em;
     font-style: italic;
-    line-height: 1.5;
+    line-height: $line-height;
     text-align: center;
   }
   code, pre {
@@ -324,14 +324,14 @@ $editor-content-breakpoint: 37.5em;
       margin: 0;
       padding: 0 4px 5px;
       font-size: .875em;
-      line-height: 1.5;
+      line-height: $line-height;
     }
   }
   .entry-caption {
     margin: 0;
     padding: 0 4px 5px;
     font-size: .875em;
-    line-height: 1.5;
+    line-height: $line-height;
   }
 }
 

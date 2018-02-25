@@ -9,6 +9,7 @@
 //----------Font Base
 body {
   text-rendering: optimizeLegibility;
+  font-size: $ont-size-body;
 }
 
 body,
@@ -53,5 +54,4 @@ h6, .h6 {
 
 p {
   line-height: $line-height;
-  margin: 0 0 1rem;
 }
