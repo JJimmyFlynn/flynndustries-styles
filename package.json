@@ -2,7 +2,7 @@
   "name": "generator-flynndustries-styles",
   "version": "1.0.0",
   "description": "A simple Yeoman generator to generate SCSS files for projects",
-  "homepage": "",
+  "homepage": "https://github.com/JJimmyFlynn/flynndustries-styles",
   "author": {
     "name": "John Flynn",
     "email": "JJimmyFlynn@gmail.com",
@@ -13,7 +13,6 @@
   ],
   "main": "generators/index.js",
   "keywords": [
-    "",
     "yeoman-generator"
   ],
   "devDependencies": {
@@ -24,7 +23,7 @@
     "del-cli": "^1.1.0",
     "eslint": "^4.18.1",
     "eslint-config-prettier": "^2.4.0",
-    "eslint-config-xo": "^0.18.2",
+    "eslint-config-xo": "^0.20.1",
     "eslint-plugin-prettier": "^2.2.0",
     "prettier": "^1.7.0",
     "yeoman-assert": "^3.1.0",

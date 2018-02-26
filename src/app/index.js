@@ -4,7 +4,7 @@ import { coreFiles, wordpressFiles, shopifyFiles } from './includedFiles';
 
 class FlynnStyles extends Yeoman {
   welcome() {
-    this.log(chalk.blue('Welcome to the Flynndustries Styles Generator!'))
+    this.log(chalk.blue('Welcome to the Flynndustries Styles Generator!'));
   }
 
   prompts() {
@@ -50,7 +50,8 @@ class FlynnStyles extends Yeoman {
   }
 
   copyCoreFiles() {
-    coreFiles.forEach(file => this.fs.copyTpl(
+    coreFiles.forEach(file =>
+      this.fs.copyTpl(
         this.templatePath(this.options.basePath + file),
         this.destinationPath(this.options.basePath + file),
         {
