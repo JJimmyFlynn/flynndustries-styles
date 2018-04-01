@@ -25,10 +25,25 @@ class FlynnStyles extends Yeoman {
         ]
       },
       {
+        type: 'list',
+        name: 'styleType',
+        message: 'Use SASS or Stylus starter?',
+        choices: [
+          {
+            name: 'SASS',
+            value: 'sass'
+          },
+          {
+            name: 'Stylus',
+            value: 'stylus'
+          }
+        ]
+      },
+      {
         type: 'input',
         name: 'basePath',
         message: 'Where should the files be copied (relative to current directory)?',
-        default: 'sass/'
+        default: 'styles'
       },
       {
         type: 'input',
@@ -43,6 +58,7 @@ class FlynnStyles extends Yeoman {
       }
     ]).then(props => {
       this.options.projectType = props.projectType;
+      this.options.styleType = props.styleType;
       this.options.basePath = props.basePath;
       this.options.projectName = props.projectName;
       this.options.author = props.author;
@@ -52,8 +68,8 @@ class FlynnStyles extends Yeoman {
   copyCoreFiles() {
     coreFiles.forEach(file =>
       this.fs.copyTpl(
-        this.templatePath(this.options.basePath + file),
-        this.destinationPath(this.options.basePath + file),
+        this.templatePath(this.options.styleType + '/' + file),
+        this.destinationPath(this.options.basePath + '/' + file),
         {
           project: this.options.projectName,
           author: this.options.author
@@ -66,8 +82,8 @@ class FlynnStyles extends Yeoman {
     if (this.options.projectType === 'shopify') {
       shopifyFiles.forEach(file =>
         this.fs.copyTpl(
-          this.templatePath(this.options.basePath + file),
-          this.destinationPath(this.options.basePath + file),
+          this.templatePath(this.options.styleType + '/' + file),
+          this.destinationPath(this.options.basePath + '/' + file),
           {
             project: this.options.projectName,
             author: this.options.author
@@ -81,8 +97,8 @@ class FlynnStyles extends Yeoman {
     if (this.options.projectType === 'wordpress') {
       wordpressFiles.forEach(file =>
         this.fs.copyTpl(
-          this.templatePath(this.options.basePath + file),
-          this.destinationPath(this.options.basePath + file),
+          this.templatePath(this.options.styleType + '/' + file),
+          this.destinationPath(this.options.basePath + '/' + file),
           {
             project: this.options.projectName,
             author: this.options.author
