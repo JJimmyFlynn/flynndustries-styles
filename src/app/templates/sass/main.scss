@@ -6,26 +6,28 @@
 //--------------------------------------------------------------
 
 //----------Vendor Styles
-@import "vendor/_normalize";
+@import 'vendor/normalize';
+
+//----------Settings
+@import 'settings/fonts';
+@import 'settings/colors';
+@import 'settings/breakpoints';
+@import 'settings/spacing';
+@import 'settings/z-index';
 
 //----------Utilities
-@import "utilities/_variables";
-@import "utilities/_mixins";
+@import 'utilities/accessibility';
+@import 'utilities/mixins';
 
 //----------Base Styles
-@import "base/_base";
-@import "base/_typography";
-@import "base/_wordpress";
+@import 'base/document';
+@import 'base/typography';
+@import 'base/wordpress';
 
 //----------Components
-@import "components/_buttons";
-@import "components/_forms";
+@import 'components/buttons';
+@import 'components/forms';
 
 //----------Modules
-@import "modules/_header";
-@import "modules/_footer";
-
-//----------Pages
-@import "pages/_home";
-@import "pages/_general";
-@import "pages/_posts";
+@import 'modules/header';
+@import 'modules/footer';

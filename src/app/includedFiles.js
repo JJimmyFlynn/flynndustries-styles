@@ -1,18 +1,21 @@
 export const coreFiles = [
-  'base/_base.scss',
+  'base/_document.scss',
   'base/_typography.scss',
   'components/_buttons.scss',
   'components/_forms.scss',
   'modules/_header.scss',
   'modules/_footer.scss',
-  'pages/_general.scss',
-  'pages/_home.scss',
+  'settings/_fonts.scss',
+  'settings/_colors.scss',
+  'settings/_breakpoints.scss',
+  'settings/_spacing.scss',
+  'settings/_z-index.scss',
+  'utilities/_accessibility.scss',
   'utilities/_mixins.scss',
-  'utilities/_variables.scss',
   'vendor/_normalize.scss',
   'main.scss'
 ];
 
-export const wordpressFiles = ['base/_wordpress.scss', 'pages/_posts.scss'];
+export const wordpressFiles = ['base/_wordpress.scss'];
 
 export const shopifyFiles = ['base/_shopify.scss'];

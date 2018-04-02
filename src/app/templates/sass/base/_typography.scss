@@ -6,10 +6,13 @@
 // III. Paragraph Base
 
 
-//----------Font Base
+//-----------------------------------------
+// Font Base
+//-----------------------------------------
 body {
+  font-size: $font-size-body;
+
   text-rendering: optimizeLegibility;
-  font-size: $ont-size-body;
 }
 
 body,
@@ -20,11 +23,21 @@ button {
 }
 
 html {
-  font-size: 100%;
   line-height: $line-height;
 }
 
-//----------Heading Sizes
+//-----------------------------------------
+// Headings
+//-----------------------------------------
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-weight: $font-weight-heading;
+  font-family: $font-family-heading;
+}
 
 h1, .h1 {
   font-size: 2rem;
@@ -50,8 +63,9 @@ h6, .h6 {
   font-size: 0.75rem;
 }
 
-//----------Paragraphs
-
+//-----------------------------------------
+// Paragraphs
+//-----------------------------------------
 p {
   line-height: $line-height;
 }
