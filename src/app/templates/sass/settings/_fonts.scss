@@ -12,3 +12,12 @@ $font-weight-body: $font-weight-normal;
 
 $font-family-heading: '';
 $font-weight-heading: $font-weight-bold;
+
+$heading-sizes: (
+  h1: 4rem,
+  h2: 3.2rem,
+  h3: 2.8rem,
+  h4: 2.4rem,
+  h5: 2.2rem,
+  h6: 2rem
+);
