@@ -72,7 +72,8 @@ class FlynnStyles extends Yeoman {
         this.destinationPath(this.options.basePath + '/' + file),
         {
           project: this.options.projectName,
-          author: this.options.author
+          author: this.options.author,
+          projectType: this.options.projectType
         }
       )
     );
