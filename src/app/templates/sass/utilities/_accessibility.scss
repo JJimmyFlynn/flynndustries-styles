@@ -1,7 +1,6 @@
-//--------------------------------------------------------------
-// Accessibility Helpers
-//--------------------------------------------------------------
+// Contains Accessibility Utility Functions for <%= project %>
+// Author: <%= author %>
 
-.visually-hidden {
+.u-visually-hidden {
   @include visually-hidden;
 }
