@@ -22,6 +22,7 @@
 //----------Base Styles
 @import 'base/document';
 @import 'base/typography';
+@import 'base/images';
 <% if (projectType == "wordpress") { %>@import 'base/wordpress';<% } %>
 <% if (projectType == "shopify") { %>@import 'base/shopify';<% } %>
 

@@ -1,6 +1,7 @@
 export const coreFiles = [
   'base/_document.scss',
   'base/_typography.scss',
+  'base/_images.scss',
   'components/_buttons.scss',
   'components/_forms.scss',
   'modules/_header.scss',
