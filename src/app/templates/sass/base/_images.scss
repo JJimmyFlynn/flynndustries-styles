@@ -27,8 +27,8 @@
   &.lazyloaded {
     opacity: 1;
   }
+}
 
-  .no-js & { // Hide JS loaded images in favor of 'noscript' images
-    display: none;
-  }
+.no-js .js-image { // Hide JS loaded images in favor of 'noscript' images
+  display: none;
 }
