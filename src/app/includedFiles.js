@@ -4,7 +4,7 @@ export const coreFiles = [
   'base/_images.scss',
   'base/_accessibility.scss',
   'objects/_buttons.scss',
-  'objects/_forms.scss',
+  'objects/_inputs.scss',
   'components/_header.scss',
   'components/_footer.scss',
   'settings/_fonts.scss',
