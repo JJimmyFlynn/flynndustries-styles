@@ -15,21 +15,21 @@
 @import 'settings/spacing';
 @import 'settings/z-index';
 
-//----------Utilities
-@import 'utilities/accessibility';
-@import 'utilities/mixins';
+//----------Tools
+@import 'tools/mixins';
 
 //----------Base Styles
 @import 'base/document';
 @import 'base/typography';
 @import 'base/images';
+@import 'base/accessibility';
 <% if (projectType == "wordpress") { %>@import 'base/wordpress';<% } %>
 <% if (projectType == "shopify") { %>@import 'base/shopify';<% } %>
 
-//----------Components
-@import 'components/buttons';
-@import 'components/forms';
+//----------Objects
+@import 'objects/buttons';
+@import 'objects/forms';
 
-//----------Modules
-@import 'modules/header';
-@import 'modules/footer';
+//----------Components
+@import 'components/header';
+@import 'components/footer';
