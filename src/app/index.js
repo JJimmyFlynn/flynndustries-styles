@@ -48,7 +48,7 @@ class FlynnStyles extends Yeoman {
       {
         type: 'input',
         name: 'projectName',
-        message: 'What is the name of the theme or projec?'
+        message: 'What is the name of the theme or project?'
       },
       {
         type: 'input',
