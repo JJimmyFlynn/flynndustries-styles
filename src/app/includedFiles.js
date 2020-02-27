@@ -1,4 +1,5 @@
 export const coreFiles = [
+  'base/_reset.scss',
   'base/_document.scss',
   'base/_typography.scss',
   'base/_images.scss',
