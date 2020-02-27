@@ -13,7 +13,6 @@ export const coreFiles = [
   'settings/_spacing.scss',
   'settings/_z-index.scss',
   'tools/_mixins.scss',
-  'vendor/_normalize.scss',
   'main.scss'
 ];
 

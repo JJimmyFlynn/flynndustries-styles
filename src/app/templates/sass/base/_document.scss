@@ -16,22 +16,11 @@ html {
 }
 
 //-----------------------------------------
-// Box Sizing
-//-----------------------------------------
-* {
-  box-sizing: border-box;
-}
-
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-//-----------------------------------------
 // Images
 //-----------------------------------------
 img {
   max-width: 100%;
+  display: block;
   vertical-align: middle; //Setting `vertical-align` removes the whitespace that appears under `img`
   font-style: italic; //Offset `alt` text from surrounding copy
 }
