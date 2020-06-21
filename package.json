@@ -1,6 +1,6 @@
 {
   "name": "generator-flynndustries-styles",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple Yeoman generator to generate SCSS files for projects",
   "homepage": "https://github.com/JJimmyFlynn/flynndustries-styles",
   "author": {
