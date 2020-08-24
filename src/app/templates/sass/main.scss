@@ -15,19 +15,17 @@
 //----------Tools
 @import 'tools/mixins';
 
-//----------Base Styles
-@import 'base/reset';
-@import 'base/document';
-@import 'base/typography';
-@import 'base/images';
-@import 'base/accessibility';
-<% if (projectType == "wordpress") { %>@import 'base/wordpress';<% } %>
-<% if (projectType == "shopify") { %>@import 'base/shopify';<% } %>
-
-//----------Objects
-@import 'objects/buttons';
-@import 'objects/inputs';
+//----------Global Styles
+@import 'global/reset';
+@import 'global/document';
+@import 'global/typography';
+@import 'global/images';
+@import 'global/accessibility';
+<% if (projectType == "wordpress") { %>@import 'global/wordpress';<% }  %>
+<% if (projectType == "shopify") { %>@import 'global/shopify';<% }  %>
 
 //----------Components
+@import 'components/buttons';
+@import 'components/inputs';
 @import 'components/header';
 @import 'components/footer';
